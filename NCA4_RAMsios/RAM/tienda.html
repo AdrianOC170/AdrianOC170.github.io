@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Tarjetas RAM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="images/icono.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      background: linear-gradient(135deg, #3d87c4, #253142);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .product-card h5 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #1f2937;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .centro {
+      flex: 1;
+      text-align: right; 
+    }
+
+    .enlaces-container {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+    }
+
+    .izquierda {
+      flex: 1;
+      text-align: left; 
+    }
+
+    .a1, .a2{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .a1:hover, .a2:hover{
+      color: #3d87c4; 
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="inicio.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="ram_server.html">Ram de Servidor</a></li>
+          <li class="nav-item"><a class="nav-link" href="comparativas.html">Comparativas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <h1>Tienda de Tarjetas RAM</h1>
+  </div>
+
+  <div class="container my-4 d-flex justify-content-between">
+    <input type="text" id="searchBar" class="form-control" placeholder="Buscar tarjeta RAM por nombre...">
+    <select id="sortOptions" class="form-select w-auto ms-2">
+      <option value="name">Ordenar por nombre</option>
+      <option value="priceDesc">Precio más alto</option>
+      <option value="priceAsc">Precio más bajo</option>
+    </select>
+  </div>
+
+  <div class="container my-5" id="productContainer">
+    <div class="row">
+
+      <div class="col-md-4 mb-4 product" data-name="Kingston 1" data-info="Memoria RAM DDR4 de 3200MT/s con corrección de errores (ECC), tipo SODIMM, diseñada para estabilidad en sistemas críticos. Funciona a 1.2V y tiene 260 pines.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/king4.jpg" width="200" alt="Tarjeta RAM 1">
+          <h5>Kingston DDR4 3200MT/s* ECC</h5>
+          <h6>Precio: 147,30€</h6>
+          <a href="https://www.kingston.com/datasheets/KSM32SED8_32MF.pdf" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 product" data-name="Kingston 2" data-info="Memoria RAM DDR5 de 5600MT/s con corrección de errores (ECC), tipo SODIMM, ideal para sistemas avanzados. Opera a 1.1V y cuenta con 262 pines.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/king4.jpg" width="200" alt="Tarjeta RAM 2">
+          <h5>Kingston DDR5 5600MT/s* ECC</h5>
+          <h6>Precio: 131,64€</h6>
+          <a href="https://www.kingston.com/datasheets/KSM56T46BD8KM-48HM.pdf" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 product" data-name="Kingston 3" data-info="Memoria RAM DDR5 de 6400MT/s con corrección de errores (ECC), tipo Registered DIMM, ideal para servidores. Opera a 1.1V y tiene 288 pines.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/king4.jpg" width="200" alt="Tarjeta RAM 3">
+          <h5>Kingston DDR5 6400MT/s* ECC</h5>
+          <h6>Precio: 321,47€</h6>
+          <a href="https://www.kingston.com/datasheets/KSM64R52BD4-128MB.pdf" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>      
+
+      <div class="col-md-4 mb-4 product" data-name="Dell 1" data-info="Aquí tienes: Memoria RAM DDR4 de 2666 MT/s, tipo LRDIMM (Load Reduced DIMM), diseñada para servidores y sistemas de alto rendimiento. Funciona a 1.2V y tiene 288 pines.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/dell1.jpg" width="150" alt="Tarjeta RAM 4">
+          <h5>Dell DDR4 LRDIMM 2666 MT/s</h5>
+          <h6>Precio: 1.138,89€</h6>
+          <a href="https://www.dell.com/es-es/shop/dell-ampliaci%C3%B3n-de-memoria-64-gb-4rx4-ddr4-lrdimm-2666-mt-s/apd/a9781930/flash-y-ampliaciones-de-memoria#techspecs_section" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>      
+
+      <div class="col-md-4 mb-4 product" data-name="Dell 2" data-info="Aquí tienes: Memoria RAM DDR4 de 2933 MT/s, tipo RDIMM (Registered DIMM), diseñada para servidores y sistemas de alto rendimiento. Funciona a 1.2V y tiene 288 pines.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/dell2.jpg" width="150" alt="Tarjeta RAM 5">
+          <h5>Dell DDR4 RDIMM 2933 MT/s</h5>
+          <h6>Precio: 1.138,89€</h6>
+          <a href="https://www.dell.com/es-es/shop/dell-ampliaci%C3%B3n-de-memoria-64-gb-2rx4-ddr4-rdimm-2933-mt-s-cascade-lake-s%C3%B3lo/apd/aa579530/flash-y-ampliaciones-de-memoria#tabs_section" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>      
+
+      <div class="col-md-4 mb-4 product" data-name="Dell 3" data-info="Memoria RAM DDR4 de 2133 MT/s, tipo RDIMM (Registered DIMM), diseñada para servidores y sistemas de alto rendimiento. Funciona a 1.2V y tiene 288 pines.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/dell3.jpg" width="150" alt="Tarjeta RAM 6">
+          <h5>Dell DDR4 RDIMM 2133 MT/s</h5>
+          <h6>Precio: 466,01€</h6>
+          <a href="https://www.dell.com/es-es/shop/dell-ampliaci%C3%B3n-de-memoria-16-gb-2rx4-ddr4-rdimm-2133-mt-s/apd/a7945660/flash-y-ampliaciones-de-memoria#techspecs_section" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 product" data-name="Crucial 1" data-info="Memoria RAM Crucial DDR4 de 64GB con velocidad de 3200 MT/s, tipo SODIMM. Funciona a 1.2V y tiene 260 pines.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/crucial1.jpg" width="150" alt="Tarjeta RAM 7">
+          <h5>Crucial 64GB DDR4-3200 SODIMM</h5>
+          <h6>Precio: 193,99€</h6>
+          <a href="https://www.crucial.es/memory/ddr4/CT2K32G4SFD832A" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>   
+
+      <div class="col-md-4 mb-4 product" data-name="Crucial 2" data-info="Memoria RAM Crucial Pro DDR5 de 128GB (2 x 64GB) con velocidad de 5600 MT/s, tipo UDIMM, ideal para sistemas avanzados. Opera a 1.1V, tiene 288 pines y cuenta con un disipador de calor integrado.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/crucial1.jpg" width="150" alt="Tarjeta RAM 8">
+          <h5>Crucial Pro 128GB Kit DDR5-5600 </h5>
+          <h6>Precio: 390,19€</h6>
+          <a href="https://www.crucial.es/memory/ddr5/CP2K64G56C46U5#Kits" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 product" data-name="Crucial 3" data-info="Memoria RAM Crucial Pro DDR5 de 64GB (2 x 32GB) con velocidad de 6400 MT/s, tipo UDIMM, ideal para sistemas avanzados. Opera a 1.35V, tiene 288 pines y cuenta con un disipador de calor integrado para un mejor rendimiento.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <img src="images/crucial1.jpg" width="150" alt="Tarjeta RAM 9">
+          <h5>Crucial Pro 64GB Kit DDR5-6400 </h5>
+          <h6>Precio: 203,99€</h6>
+          <a href="https://www.crucial.es/memory/ddr5/CP2K32G64C40U5B" download="Especificaciones" class="btn btn-primary">Especificaciones</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center my-4 product" data-name="Kingston" data-info="https://www.kingston.com/es">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <a href="https://www.kingston.com/es" download="Especificaciones" class="btn btn-primary">Conoce Kingston</a>
+        </div>
+      </div>        
+
+      <div class="col-md-4 text-center my-4 product" data-name="Dell" data-info="https://www.dell.com/es-es">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <a href="https://www.dell.com/es-es" download="Especificaciones" class="btn btn-primary">Conoce Dell</a>
+        </div>
+      </div>     
+
+      <div class="col-md-4 text-center my-4 product" data-name="Crucial" data-info="https://www.dell.com/es-es">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <a href="https://www.crucial.es/" download="Especificaciones" class="btn btn-primary">Conoce Crucial</a>
+        </div>
+      </div>      
+
+      <div class="col-md-12 text-center my-4 product" data-name="Tienda" data-info="Aquí podrás encontrar módulos ram para servidores de segunda mano.">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal">
+          <a href="https://www.give1life.com/categoria/computer-memory-ram/" download="Especificaciones" class="btn btn-primary">Give1Life</a>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">Información</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="productInfo">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="enlaces-container">
+  <div class="izquierda">
+    <a class="a1" href="comparativas.html">← Comparativas</a>
+  </div>
+  <div class="centro">
+    <a class="a2" href="inicio.html">Inicio</a>
+  </div>
+
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const searchBar = document.getElementById('searchBar');
+    const products = document.querySelectorAll('.product');
+
+    searchBar.addEventListener('input', () => {
+      const searchTerm = searchBar.value.toLowerCase();
+      products.forEach(product => {
+        const name = product.dataset.name.toLowerCase();
+        if (name.includes(searchTerm)) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+
+    const productCards = document.querySelectorAll('.product-card');
+    const productInfo = document.getElementById('productInfo');
+    productCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const product = card.closest('.product');
+        const info = product.dataset.info;
+        productInfo.textContent = info;
+      });
+    });
+
+    const sortOptions = document.getElementById('sortOptions');
+    const productContainer = document.querySelector('#productContainer .row');
+
+    let originalProducts = Array.from(productContainer.getElementsByClassName('product'));
+
+    function sortAndRender() {
+        const selectedOption = sortOptions.value;
+        
+        let sortedProducts = [];
+
+        if (selectedOption === 'priceAsc') {
+            sortedProducts = [
+                originalProducts[1], // Producto 2
+                originalProducts[0], // Producto 1
+                originalProducts[6], // Producto 7
+                originalProducts[8], // Producto 9
+                originalProducts[2], // Producto 3
+                originalProducts[7], // Producto 8
+                originalProducts[5], // Producto 6
+                originalProducts[4], // Producto 5
+                originalProducts[3], // Producto 4
+            ];
+        } else if (selectedOption === 'priceDesc') {
+            sortedProducts = [
+                originalProducts[3], // Producto 4
+                originalProducts[4], // Producto 5
+                originalProducts[5], // Producto 6
+                originalProducts[7], // Producto 8
+                originalProducts[2], // Producto 3
+                originalProducts[8], // Producto 9
+                originalProducts[6], // Producto 7
+                originalProducts[0], // Producto 1
+                originalProducts[1], // Producto 2
+            ];
+        } else {
+            sortedProducts = [...originalProducts];
+        }
+
+        productContainer.innerHTML = '';
+        sortedProducts.forEach(product => productContainer.appendChild(product));
+    }
+
+    sortOptions.addEventListener('change', sortAndRender);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoria RAM para Servidores</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="images/icono.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      background: linear-gradient(135deg, #3d87c4, #253142);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .content {
+      text-align: justify;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 30px;
+      color: #3d87c4;
+      text-transform: uppercase;
+    }
+    .image-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+    .table-dark th {
+      background-color: #3d87c4;
+      color: white;
+    }
+
+    .enlaces-container {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 20px; 
+    }
+
+    .izquierda {
+      flex: 1;
+      text-align: left; 
+    }
+
+    .derecha {
+      flex: 1;
+      text-align: right; 
+    }
+
+    .a1, .a3 {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .a1:hover, .a3:hover {
+      color: #3d87c4; 
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="inicio.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="ram_server.html">Ram de Servidor</a></li>
+          <li class="nav-item"><a class="nav-link" href="comparativas.html">Comparativas</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Memoria RAM para Servidores</h1>
+
+  <div class="container my-5">
+    <h2 class="section-title">Tarjetas RAM de Servidor</h2>
+    <p class="fs-5 text-dark content">
+      La memoria RAM (Random Access Memory) es un componente esencial en cualquier sistema informático, y en el caso de los servidores, su importancia es aún mayor. A diferencia de la memoria RAM utilizada en computadoras personales, la RAM de servidor está diseñada para ofrecer mayor estabilidad, fiabilidad y capacidad de corrección de errores, características que se cumplen a través de las tenologías ECC con su corrección de errores y las técnicas de interleaving y dual/quad channel.
+    </p>
+
+    <h2 class="section-title">Tipos de Memoria RAM de Servidor</h2>
+    <p class="fs-5 text-dark content">
+    Existen distintos tipos de memoria RAM utilizadas en servidores, entre las cuales destacan RDIMM (Registered DIMM) y LRDIMM (Load-Reduced DIMM).
+    </p>
+    <h3 class="text-center text-primary fw-bold">RDIMM (Registered DIMM)</h3>
+    <p class="fs-5 text-dark content">
+      La memoria R-DIMM o RDIMM (Registered Dual In-Line Memory Module) es un tipo de módulo de memoria que cuenta con un registro o buffer que actúa como un intermediario entre los chips de memoria y el controlador de memoria. Esto ayuda a estabilizar y mejorar la señal antes de enviarla al controlador, lo que la hace ideal para servidores debido a su gran fiabilidad.
+    </p>
+    <div class="image-container">
+      <img src="images/RAM-RDIMM.jpg" alt="Memoria RAM RDIMM">
+    </div>
+
+    <h3 class="text-center text-primary fw-bold">LRDIMM (Load-Reduced DIMM)</h3>
+    <p class="fs-5 text-dark content">
+      La memoria LRDIMM reduce la carga del bus de memoria mediante su función de carga-descarga con CCL. Se emplea en servidores de alta capacidad para mejorar la estabilidad y rendimiento en sistemas con múltiples módulos de memoria.
+    </p>
+    <div class="image-container">
+      <img src="images/ram-LRDIMM.jpg" alt="Memoria RAM LRDIMM">
+    </div>
+    
+    <h2 class="section-title">Tecnología ECC</h2>
+    <p class="fs-5 text-dark content">
+      La memoria ECC (Error-Correcting Code) detecta y corrige errores de memoria, lo que la hace ideal para entornos como servidores y centros de datos. 
+      Este tipo de memoria ayuda a prevenir la corrupción de datos, aumentando la fiabilidad del sistema y reduciendo las posibilidades de fallos críticos. 
+      Su funcionamiento se basa en la detección de bits erróneos y su corrección antes de que lleguen al procesador. 
+    </p>
+    <p class="fs-5 text-dark content">
+      La siguiente imagen muestra un diagrama de fallo de la RAM ECC, donde se puede apreciar como 
+      tras haber un periodo de tiempo sin fallo (MUT/MTTF) ocurre un fallo (empiza el MDT) la propia RAM se encarga de detectarlo y solventar el problema (MTTR) y vuelve a su funcionamiento habitual.
+        </p>
+    <div class="image-container">
+      <img src="images/efecto-error-reparacion.jpg" alt="Corrección de errores en RAM">
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+          <thead class="table-dark">
+              <tr>
+                  <th>Métrica</th>
+                  <th>Descripción</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><strong>MTTF</strong> (Mean Time To Failure)</td>
+                  <td>Tiempo medio hasta el primer fallo del sistema. En sistemas reparables, es igual al MUT. En sistemas no reparables, es igual al MTBF.</td>
+              </tr>
+              <tr>
+                  <td><strong>MTBF</strong> (Mean Time Between Failures)</td>
+                  <td>Tiempo medio entre fallos, mide la fiabilidad del sistema. Se calcula como <strong>MTBF = MTTF + MDT</strong>.</td>
+              </tr>
+              <tr>
+                  <td><strong>MDT</strong> (Mean Down Time)</td>
+                  <td>Tiempo que el sistema está fuera de servicio tras un fallo. Incluye el tiempo de detección y reparación.</td>
+              </tr>
+              <tr>
+                  <td><strong>MTTR</strong> (Mean Time To Repair)</td>
+                  <td>Tiempo medio necesario para reparar un sistema tras un fallo. Debe ser lo más corto posible para reducir el impacto.</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+    <h2 class="section-title">Técnicas de Interleaving y Dual/Quad Channel</h2>
+    <p class="fs-5 text-dark content">
+      El Interleaving es una técnica utilizada en la memoria RAM para mejorar el acceso a los datos, reduciendo la latencia y aumentando el rendimiento. En lugar de leer o escribir toda la información desde un solo módulo, los datos se distribuyen en múltiples módulos o bancos de memoria, permitiendo que el procesador acceda a ellos en paralelo.
+    </p>
+
+
+    <ul class="fs-5 text-justify">
+      <li><strong>Interleaving de banco: </strong> Se usa dentro de un solo módulo de RAM, alternando datos entre diferentes bancos internos para acelerar las operaciones.</li>
+      <li><strong> Interleaving de canal (Dual/Quad Channel):</strong> Distribuye la carga de trabajo entre múltiples módulos físicos de RAM, permitiendo que el procesador acceda a más datos simultáneamente.</li>
+      <ul>  
+        <li><strong>Dual Channel:</strong> El Dual Channel es una tecnología que permite que dos módulos de RAM trabajen juntos para duplicar el ancho de banda de la memoria. </li>
+        <li><strong>Quad Channel:</strong> El Quad Channel es una tecnología que permite que cuatro módulos de RAM trabajen simultáneamente, cuadruplicando el ancho de banda de la memoria.</li>
+      </ul>
+    </ul>
+  </div>
+
+  <div class="enlaces-container">
+    <div class="izquierda">
+      <a class="a1" href="inicio.html">← Inicio</a>
+    </div>
+    <div class="derecha">
+      <a class="a3" href="comparativas.html">Comparativas →</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
