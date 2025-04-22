@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  .grandegrande{
+      font-family: monospace  ;
+      font-size: 60px;
+      color: bisque;
+  }
+  .mediana{
+      font-family: monospace  ;
+      font-size: 30px;
+  }
+  #choco
+  {
+  color: #20da19;
+  }
