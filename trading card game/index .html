@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cromo Tutoz</title>
+  <style>
+    body {
+      background  : #444;
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      background-color: #919191;
+    }
+
+    .carta {
+      position: relative;
+      width: 310px;
+      height: 455px;
+      background: white;
+      border: 15px solid #4717009a;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px black;
+    }
+
+    .carta-cabecera {
+      background: #fff7e2;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+    } 
+
+    .mana {
+      font-size: 20px;
+      color: rgb(0, 4, 255);
+    }
+
+    .imagen {
+      width: 100%;
+      height: 200px;
+      background-color: #ccc;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .habilidad {
+      background: #4717009a;
+      text-align: center;
+      color: #fff7e2;
+      font-family: 'Franklin Gothic Medium';
+      font-weight: bold;
+      padding: 6px;
+      border-top: 2px solid #aaa;
+      border-bottom: 2px solid #aaa;
+    }
+
+    .texto {
+      padding: 10px;
+      font-size: 14px;
+      min-height: 80px;
+    }
+
+    .fondo {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-top: 1px solid #999;
+      font-weight: bold;
+    }
+
+    .pie {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 4px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carta" style="background-image: url(img/beyond.png);">
+  <div class="carta-cabecera">
+    <span class="nombre">JOSE</span>
+    <span class="mana">🌟🌟🌟🌟🌟🌟</span> 
+  </div>
+
+  <div class="imagen"></div>
+
+  <div class="habilidad">+3 SUPER_FUERZA </div>
+
+
+  <div class="texto">
+    esto es mi descripcion
+
+  </div>
+
+  <div class="fondo">
+    <span>4</span> 
+    <span>ARTISTA</span>
+  </div>
+
+  <div class="pie">AdrianO</div>
+</div>
+
+</body>
+</html>
